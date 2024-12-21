@@ -33,7 +33,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: #009666;
+    background: #0096;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,5 +43,6 @@ body {
 .logo {
     font-size: 32 px;
     text-decoration: none;
-    font-weight: 700;
+    color: #fff;
+    font-weight: 1000;
 }
