@@ -46,3 +46,17 @@ body {
     color: #fff;
     font-weight: 1000;
 }
+
+.SideNav a {
+    color: #ffff;
+    position: fixed;
+    font-wight: 700;
+    top: 0;
+    text-decoration: none;
+    margin-left: 35 px;
+    transition: right 0.3s;
+}
+
+.SideNav a:hover {
+    color: #00000;
+}
