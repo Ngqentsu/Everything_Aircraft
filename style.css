@@ -52,7 +52,7 @@ body {
     font-wight: 700;
     text-decoration: none;
     margin-left: 35 px;
-    transition: right 0.3s;
+    transition: 3s;
 }
 
 .navbar a:hover {
