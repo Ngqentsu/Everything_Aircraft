@@ -47,7 +47,7 @@ body {
     font-weight: 1000;
 }
 
-.SideNav a {
+.navbar a {
     color: #ffff;
     font-wight: 700;
     text-decoration: none;
@@ -55,6 +55,6 @@ body {
     transition: right 0.3s;
 }
 
-.SideNav a:hover {
+.navbar a:hover {
     color: #00000;
 }
