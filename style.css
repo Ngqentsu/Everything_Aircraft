@@ -23,6 +23,26 @@
     font-style: italic;
 }
 
+.landing-text start-btn {
+    width: 200px;
+    height: 55 px;
+    background: #0096;
+    border: 2px solid #fff;
+    border-radius: 5 px;
+    box-shadow: 0 0 10px #0096;
+    outline: none;
+    font-size: 30 px;
+    font-weight: 600px;
+    color: #0000;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 3s;
+}
+.landing-text start-btn:hover {
+    background: #0000;
+    box-shadow: none;
+}
+
 body {
     color: #fff;
 }
