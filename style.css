@@ -24,16 +24,16 @@
 }
 
 .landing-text start-btn {
-    width: 200px;
-    height: 55 px;
+    width: 300px;
+    height: 100 px;
     background: #0096;
-    border: 2px solid #fff;
+    border: 2px solid #0000;
     border-radius: 5 px;
-    box-shadow: 0 0 10px #0096;
+    box-shadow: 0 0 20px #0096;
     outline: none;
-    font-size: 30 px;
-    font-weight: 600px;
-    color: #0000;
+    font-size: 50 px;
+    font-weight: 1000px;
+    color: #fff;
     letter-spacing: 1px;
     cursor: pointer;
     transition: 3s;
