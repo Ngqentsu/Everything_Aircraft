@@ -14,11 +14,11 @@
   <div class="landing-text">
     <h1>Everything Aircraft</h1>
     <p>All you know and need to know about aircraft!</p>
-    <button class="start-btn">Start Quiz</button>
+    <button class="start-btn" id="start-quiz-btn">Start Quiz</button>
   </div>
 </section>
   
-  <main class="main">
+  <main class="main" id="quiz-container" style="display: none;">
     <header class="header">
       <a href="#" class="logo">Quiz</a>
 
@@ -29,8 +29,15 @@
 	<a href="#">CONTACT</a>
       </nav>
     </header>
+
+    <div id="quiz">
+    </div>
+    <button id="next-btn" class="next-btn" style="display: none;">Next</button>
   </main>
 
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+  
 </body>
 
 </html>
