@@ -89,7 +89,7 @@ body {
     padding: 10px 25px;
 }
 .pop-info h2 {
-    color: #000000;
+    color: #0096;
     font-size: 50px;
 }
 .pop-info .info {
@@ -98,4 +98,9 @@ body {
     font-size: 20px;
     font-weight: 500;
     margin: 4px 0;
+}
+.pop-info .btn-class {
+    justify-content: space between;
+    display: flex;
+    align-items: center;
 }
