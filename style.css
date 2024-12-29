@@ -77,3 +77,13 @@ body {
 .navbar a:hover {
     color: #009666;
 }
+
+.pop-info {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    background: #000080;
+    border-radius: 6px;
+    transform: translate(-50%, -50%);
+}
