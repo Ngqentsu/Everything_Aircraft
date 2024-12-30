@@ -87,6 +87,8 @@ body {
     border-radius: 6px;
     transform: translate(-50%, -50%);
     padding: 10px 25px;
+    opacity: 0;
+    pointer-events: none;
 }
 .pop-info h2 {
     color: #0096;
