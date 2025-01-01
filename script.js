@@ -9,7 +9,7 @@ startBtn.onclick = () => {
 }
 
 continueBtn.onclick = () => {
-    popupInfo.classList.add('active');
+    popupInfo.classList.remove('active');
     quizInfo.classList.add('active');
 }
 
