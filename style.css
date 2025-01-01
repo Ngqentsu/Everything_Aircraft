@@ -71,7 +71,7 @@ body {
     font-wight: 700;
     text-decoration: none;
     margin-left: 35 px;
-    transition: 3s;
+    11;rgb:0000/0000/0000transition: 3s;
 }
 
 .navbar a:hover {
@@ -89,11 +89,13 @@ body {
     padding: 10px 25px;
     opacity: 0;
     pointer-events: none;
+    display: none;
     transition: 0.5s ease;
 }
 .pop-info.active {
     pointer-events: auto;
     opacity: 1;
+    display: block;
 }
 .pop-info h2 {
     color: #0096;
@@ -116,7 +118,80 @@ body {
 
 .quiz {
     display: none;
+    position: relative;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    z-index: 100;
+    transition: 0.8s ease-in-out;
+    transition-delay: 0.25s;
 }
 .quiz.active {
     display: block;
+}
+.quiz .quiz-box {
+    position: relative;
+    width: 500 px;
+    border: 2px solid #000000;
+    border-radius: 5 px;
+    background: transparent;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+.quiz-box h1 {
+    text-align: center;
+    font-size: 30px;
+}
+.quiz-box .quiz-header {
+    align-items: center;
+    padding: 20px 0;
+    display: flex;
+    margin-bottom: 2px solid #000000;
+}
+.quiz-header .span {
+    font-size: 20px;
+    font-weight: 500;
+}
+.quiz-box .question {
+    font-size: 25px;
+    font-weight: 600;
+}
+.options .option {
+    background: transparent;
+    width: 100%;
+    font-size: 15px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.options .option:hover {
+    background: #0096;
+}
+.quiz-box .quiz-footer {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.quiz-footer .question-number {
+    font-size: 20px;
+    font-weight: 500px;
+}
+.quiz-footer .next-btn {
+    width: 100px;
+    height: 50px;
+    font-size: 20 px;
+    font-weight:600px;
+    background: #0080;
+    border: 2px solid #000000;
+    border-radius; 6px;
+    outline: none;
+    color: #000000;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.quiz-footer .next-btn:hover {
+    background: #008000;
 }
