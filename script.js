@@ -2,6 +2,7 @@ const startBtn = document.querySelector('.start-btn');
 const popupInfo = document.querySelector('.pop-info');
 const continueBtn = document.querySelector('.continue-btn');
 const exitBtn = document.querySelector('.exit-btn');
+const quizInfo = document.querySelector('.quiz');
 
 startBtn.onclick = () => {
     popupInfo.classList.add('active');
@@ -9,6 +10,7 @@ startBtn.onclick = () => {
 
 continueBtn.onclick = () => {
     popupInfo.classList.add('active');
+    quizInfo.classList.add('active');
 }
 
 exitBtn.onclick = () => {
