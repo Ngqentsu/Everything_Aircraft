@@ -22,22 +22,22 @@
     font-size: 30px;
     font-style: italic;
 }
-.landing-text start-btn {
+.landing-text .start-btn {
     width: 300px;
     height: 100 px;
     background: #0096;
     border: 2px solid #0000;
-    border-radius: 5 px;
+    border-radius: 5px;
     box-shadow: 0 0 20px #0096;
     outline: none;
-    font-size: 50 px;
-    font-weight: 1000px;
+    font-size: 50px;
+    font-weight: bold;
     color: #fff;
     letter-spacing: 1px;
     cursor: pointer;
     transition: 3s;
 }
-.landing-text start-btn:hover {
+.landing-text .start-btn:hover {
     background: #0000;
     box-shadow: none;
 }
@@ -60,18 +60,18 @@ body {
 }
 
 .logo {
-    font-size: 32 px;
+    font-size: 32px;
     text-decoration: none;
     color: #fff;
-    font-weight: 1000;
+    font-weight: bold;
 }
 
 .navbar a {
     color: #ffff;
-    font-wight: 700;
+    font-weight: 700;
     text-decoration: none;
-    margin-left: 35 px;
-    11;rgb:0000/0000/0000transition: 3s;
+    margin-left: 35px;
+    transition: 0.3s;
 }
 
 .navbar a:hover {
@@ -113,16 +113,17 @@ body {
     display: flex;
     align-items: center;
     margin-top: 10px;
-    border-top: 2px solid;
+    border-top: 2px solid #fff;
 }
 
 .quiz {
     display: none;
     position: relative;
     left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: #0080;
     z-index: 100;
     transition: 0.8s ease-in-out;
     transition-delay: 0.25s;
@@ -132,9 +133,9 @@ body {
 }
 .quiz .quiz-box {
     position: relative;
-    width: 500 px;
+    width: 500px;
     border: 2px solid #000000;
-    border-radius: 5 px;
+    border-radius: 5px;
     background: transparent;
     padding: 20px 30px;
     display: flex;
@@ -163,6 +164,8 @@ body {
     width: 100%;
     font-size: 15px;
     margin: 15px 0;
+    padding: 5px;
+    border-radius: 3px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -181,11 +184,11 @@ body {
 .quiz-footer .next-btn {
     width: 100px;
     height: 50px;
-    font-size: 20 px;
+    font-size: 20px;
     font-weight:600px;
     background: #0080;
     border: 2px solid #000000;
-    border-radius; 6px;
+    border-radius: 6px;
     outline: none;
     color: #000000;
     cursor: pointer;
