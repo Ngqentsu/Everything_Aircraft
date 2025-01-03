@@ -35,12 +35,14 @@
     color: #fff;
     letter-spacing: 1px;
     cursor: pointer;
-    transition: 3s;
+    transition: 0.3s;
 }
 .landing-text .start-btn:hover {
     background: #0000;
     box-shadow: none;
 }
+
+
 
 body {
     color: #fff;
