@@ -47,16 +47,16 @@ let questionCount = 0;
 let score = 0;
 
 function displayQuestion(index) {
-    const questionData = question[Index];
-    questionInfo.textContent = questionInfo.question;
+    const questionData = questions[Index];
+    questionInfo.textContent = questionData.question;
     optionsInfo.innerHTML = "";
 
-    questionInfo.options.forEach((optionText, i) => {
+    questionData.options.forEach((optionText, i) => {
 	const option = document.createElement("div");
 	option.className = "option";
 	option.innerHTML = `<span>${optionText}</span>`;
 	option.onclick = () => selectOption(option, questionInfo.correctAnswer);
-	optionsElement.appendChild(option);
+	optionsInfo.appendChild(option);
     });
 
     questionNumberData.textContent = `${index + 1} of ${questions.length} questions`;
@@ -73,9 +73,9 @@ function selectOption(option, correctAnswer) {
 }
 
 nextBtn.onclick = () => {
-    questionCount++;
-    if (questionCount < questions.length) {
-        nextBtn.disabled = true;
+    if (questionCount < questions.length - 1) {
+	questionCount++;
+	displayQuestion(questionCount);
     } else {
         quizInfo.innerHTML = `<h2>Quiz Completed!</h2><p>Your final score is ${score} / ${questions.length}.</p>`;
     }
