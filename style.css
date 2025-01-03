@@ -130,7 +130,7 @@ body {
 .quiz.active {
     display: block;
 }
-.quiz .quiz-box {
+.quiz .quiz-border {
     position: relative;
     width: 500px;
     background: transparent;
@@ -138,11 +138,11 @@ body {
     display: flex;
     flex-direction: column;
 }
-.quiz-box h1 {
+.quiz-border h1 {
     text-align: center;
     font-size: 30px;
 }
-.quiz-box .quiz-header {
+.quiz-border .quiz-header {
     align-items: center;
     padding: 20px 0;
     display: flex;
@@ -152,7 +152,7 @@ body {
     font-size: 20px;
     font-weight: 500;
 }
-.quiz-box .question {
+.quiz-border .question {
     font-size: 25px;
     font-weight: 600;
 }
@@ -169,7 +169,7 @@ body {
 .options .option:hover {
     background: #0096;
 }
-.quiz-box .quiz-footer {
+.quiz-border .quiz-footer {
     justify-content: space-between;
     align-items: center;
     display: flex;
