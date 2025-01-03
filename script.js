@@ -7,6 +7,8 @@ const quizBorder = document.querySelector('.quiz-border');
 const nextBtn = document.querySelector('.next-btn');
 const questionInfo = document.querySelector('.question');
 const optionsInfo = document.querySelector('.options');
+const questionNumberData = document.querySelector('.question-number');
+const headerScoreElement = document.querySelector('.header-score');
 
 const questions [
     {
@@ -70,6 +72,15 @@ function selectOption(option, correctAnswer) {
     nextBtn.disabled = false;
 }
 
+nextBtn.onclick = () => {
+    questionCount++;
+    if (questionCount < questions.length) {
+        nextBtn.disabled = true;
+    } else {
+        quizInfo.innerHTML = `<h2>Quiz Completed!</h2><p>Your final score is ${score} / ${questions.length}.</p>`;
+    }
+};
+
 startBtn.onclick = () => {
     popupInfo.classList.add('active');
 }
@@ -83,12 +94,3 @@ continueBtn.onclick = () => {
 exitBtn.onclick = () => {
     popupInfo.classList.remove('active');
 }
-
-nextBtn.onclick = () => {
-    questionCount++;
-    if (questionCount < questions.length) {
-	nextBtn.disabled = true;
-    } else {
-	quizInfo.innerHTML = `<h2>Quiz Completed!</h2><p>Your final score is ${score} / ${questions.length}.</p>`;
-    }
-};
