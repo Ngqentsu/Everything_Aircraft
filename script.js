@@ -81,7 +81,7 @@ function displayQuestion(index) {
 
     questionNumberData.textContent = `${index + 1} of ${questions.length} questions`;
     nextBtn.disabled = true;
-}
+};
 
 function selectOption(option, correctAnswer) {
     const selectedOption = option.textContent.trim().charAt(0);
@@ -96,7 +96,7 @@ function selectOption(option, correctAnswer) {
     }
     headerScoreElement.textContent = `Score ${score} / ${questions.length}`;
     nextBtn.disabled = false;
-}
+};
 
 nextBtn.onclick = () => {
     questionCount++;
@@ -120,3 +120,4 @@ continueBtn.onclick = () => {
 exitBtn.onclick = () => {
     popupInfo.classList.remove('active'); // Hide popup
 };
+
