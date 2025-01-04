@@ -80,14 +80,21 @@ function displayQuestion(index) {
     });
 
     questionNumberData.textContent = `${index + 1} of ${questions.length} questions`;
+    nextBtn.disabled = true;
 }
 
 function selectOption(option, correctAnswer) {
     const selectedOption = option.textContent.trim().charAt(0);
+    const allOptions = optionsInfo.querySelectorAll('.option');
+    allOptions.forEach(opt => opt.onclick = null);
+    
     if (selectedOption === correctAnswer) {
         score++;
-        headerScoreElement.textContent = `Score ${score} / ${questions.length}`;
+	option.classList.add('correct');
+    }else {
+	option.classList.add('incorrect');
     }
+    headerScoreElement.textContent = `Score ${score} / ${questions.length}`;
     nextBtn.disabled = false;
 }
 
@@ -95,19 +102,18 @@ nextBtn.onclick = () => {
     questionCount++;
     if (questionCount < questions.length) {
         displayQuestion(questionCount);
-        nextBtn.disabled = true;
     } else {
         quizInfo.innerHTML = `<h2>Quiz Completed!</h2><p>Your final score is ${score} / ${questions.length}.</p>`;
     }
 };
 
 startBtn.onclick = () => {
-    popupInfo.classList.add('active'); // Activate popup
+    popupInfo.classList.add('active');
 };
 
 continueBtn.onclick = () => {
-    popupInfo.classList.remove('active'); // Hide popup
-    quizInfo.classList.add('active'); // Show quiz
+    popupInfo.classList.remove('active');
+    quizInfo.classList.add('active');
     displayQuestion(questionCount);
 };
 
