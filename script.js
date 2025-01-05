@@ -108,6 +108,7 @@ nextBtn.onclick = () => {
 };
 
 startBtn.onclick = () => {
+    console.log("Start Quiz button clicked");
     popupInfo.classList.add('active');
 };
 
@@ -118,6 +119,5 @@ continueBtn.onclick = () => {
 };
 
 exitBtn.onclick = () => {
-    popupInfo.classList.remove('active'); // Hide popup
+    popupInfo.classList.remove('active');
 };
-
