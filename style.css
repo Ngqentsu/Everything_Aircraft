@@ -26,7 +26,7 @@
     width: 300px;
     height: 100px;
     background: #0096;
-    border: 2px solid #0000;
+    border: 2px solid #000000;
     border-radius: 5px;
     box-shadow: 0 0 20px #0096;
     outline: none;
@@ -41,8 +41,6 @@
     background: #0000;
     box-shadow: none;
 }
-
-
 
 body {
     color: #fff;
@@ -190,7 +188,6 @@ body {
     outline: none;
     color: #000000;
     cursor: pointer;
-    pointer-events: none;
     transition: 0.5s;
 }
 .quiz-footer .next-btn:hover {
