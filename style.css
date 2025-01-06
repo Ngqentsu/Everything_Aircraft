@@ -93,7 +93,7 @@ body {
     pointer-events: none;
     transition: 0.5s ease;
 }
-.pop-info .active {
+.pop-info.active {
     pointer-events: auto;
     opacity: 1;
     display: block;
