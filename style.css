@@ -10,6 +10,9 @@
     background-position: center;
     height: 100vh;
 }
+.landing.active {
+    buffer: blur(15px);
+}
 .landing-text {
     text-align: center;
     color: #000;

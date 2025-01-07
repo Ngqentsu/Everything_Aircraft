@@ -9,7 +9,7 @@ const questionInfo = document.querySelector('.question');
 const optionsInfo = document.querySelector('.options');
 const questionNumberData = document.querySelector('.question-number');
 const headerScoreElement = document.querySelector('.header-score');
-const main = document.querySelector('.main');
+const landing = document.querySelector('.landing');
 
 const questions = [
     {
@@ -111,7 +111,7 @@ nextBtn.onclick = () => {
 startBtn.onclick = () => {
     console.log("Start Quiz button clicked");
     popupInfo.classList.add('active');
-    main.classList.add('active');
+    landing.classList.add('active');
 };
 
 continueBtn.onclick = () => {
