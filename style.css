@@ -119,22 +119,18 @@ body {
 }
 
 .quiz {
+    display: none;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 500px;
-    background:#7393B3;
-    border-radius: 6px;
-    transform: translate(-50%, -50%);
-    padding: 10px 25px;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.5s ease;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background: #0096;
+    z-index: 100;
+    transition: 0.8s ease-in-out;
+    transition-delay: 0.25s;
 }
 .quiz.active {
     display: block;
-    pointer-events: auto;
-    opacity: 1;
 }
 .quiz .quiz-border {
     position: relative;
