@@ -11,7 +11,7 @@
     height: 100vh;
 }
 .landing.active {
-    buffer: blur(15px);
+    filter: blur(15px);
 }
 .landing-text {
     text-align: center;
