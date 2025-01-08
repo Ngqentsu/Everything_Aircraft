@@ -74,12 +74,12 @@ const questions = [
     {
         question: "Fill in the blank: The ______ engine is commonly used in modern jet aircraft.",
         options: [
-            "Turbojet",
-            "Rocket",
-            "Piston",
-            "Steam"
+            "A. Turbojet",
+            "B. Rocket",
+            "C. Piston",
+            "D. Steam"
         ],
-        correctAnswer: "Turbojet",
+        correctAnswer: "A",
     },
     {
         question: "Which country developed the Concorde supersonic passenger jet?",
@@ -114,20 +114,20 @@ const questions = [
     {
         question: "True or False: The Airbus A380 can carry over 800 passengers in an all-economy configuration.",
         options: [
-            "True",
-            "False"
+            "A. True",
+            "B. False"
         ],
-        correctAnswer: "True",
+        correctAnswer: "A",
     },
     {
         question: "Fill in the blank: The ______ is a device used to measure the speed of an aircraft relative to the air.",
         options: [
-            "Altimeter",
-            "Airspeed indicator",
-            "Gyroscope",
-            "Black box"
+            "A. Altimeter",
+            "B. Airspeed indicator",
+            "C. Gyroscope",
+            "D. Black box"
         ],
-        correctAnswer: "Airspeed indicator",
+        correctAnswer: "B",
     },
     {
         question: "Which of the following aircraft holds the record for the fastest manned flight?",
@@ -142,20 +142,20 @@ const questions = [
     {
         question: "True or False: The primary purpose of spoilers on an aircraft is to increase lift during flight.",
         options: [
-            "True",
-            "False"
+            "A. True",
+            "B. False"
         ],
-        correctAnswer: "False",
+        correctAnswer: "B",
     },
     {
         question: "Fill in the blank: The process of reducing speed and descending for landing is known as the ______ phase.",
         options: [
-            "Climb",
-            "Cruise",
-            "Descent",
-            "Landing"
+            "A. Climb",
+            "B. Cruise",
+            "C. Descent",
+            "D. Landing"
         ],
-        correctAnswer: "Descent",
+        correctAnswer: "C",
     }
 ];
 
