@@ -253,3 +253,23 @@ exitBtn.onclick = () => {
 backBtn.disabled = true;
 backBtn.style.opacity = "0.5";
 backBtn.style.cursor = "not-allowed";
+
+document.addEventListener('DOMContentLoaded', () => {
+    const options = document.querySelectorAll('.option');
+    const nextBtn = document.querySelector('.next-btn');
+
+    const correctIndex = 1;
+
+    option.forEach((option, index) => {
+	option.addEventListener('click', () => {
+	    options.forEach(opt => opt.style.pointerEvents = 'none');
+	    if (index === correctIndex) {
+		option.classList.add('correct');
+	    }else {
+		option.classList.add('incorrect');
+		options[correctIndex].classList.add('correct');
+	    }
+	    nextBtn.disabled = false;
+	});
+    });
+});
