@@ -92,12 +92,12 @@ function displayQuestion(index) {
         option.className = "option";
         option.innerHTML = `<span>${optionText}</span>`;
 
-	const selectedAnswer = userAnswer[index];
-	if (selectedAnswer)) {
+	const selectedAnswer = userAnswers[index];
+	if (selectedAnswer) {
 	    if (optionText.startWith(selectedAnswer)) {
 		option.classList.add(selectedAnswer === questionData.correctAnswer ? 'correct' : 'incorrect');
 	    }
-	    option.click = null;
+	    option.onclick = null;
 	} else {
             option.onclick = () => selectOption(option, questionData.correctAnswer, index);
 	}
