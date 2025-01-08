@@ -128,8 +128,11 @@ body {
     align-items: center;
     justify-content: center;
     display: inline-flex;
+    color: #000800;
 }
-    
+.pop-info .btn-class .info-btn:hover {
+    background: #A020F0;
+}
 
 .quiz {
     display: none;
