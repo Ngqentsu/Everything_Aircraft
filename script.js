@@ -218,6 +218,7 @@ function displayQuestion(index) {
 function selectOption(option, correctAnswer, index) {
     const selectedOption = option.textContent.trim().charAt(0);
     userAnswers[index] = selectedOption;
+
     const allOptions = optionsInfo.querySelectorAll('.option');
     allOptions.forEach(opt => opt.onclick = null);
     
@@ -226,6 +227,9 @@ function selectOption(option, correctAnswer, index) {
 	option.classList.add('correct');
     }else {
 	option.classList.add('incorrect');
+
+	const correctOption = [...allOptions].find(opt => opt.textContent.trim().startsWith(correctAnswer));
+	correctOption.classList.add('correct');
     }
     headerScoreElement.textContent = `Score ${score} / ${questions.length}`;
     nextBtn.disabled = false;
@@ -253,23 +257,3 @@ exitBtn.onclick = () => {
 backBtn.disabled = true;
 backBtn.style.opacity = "0.5";
 backBtn.style.cursor = "not-allowed";
-
-document.addEventListener('DOMContentLoaded', () => {
-    const options = document.querySelectorAll('.option');
-    const nextBtn = document.querySelector('.next-btn');
-
-    const correctIndex = 1;
-
-    option.forEach((option, index) => {
-	option.addEventListener('click', () => {
-	    options.forEach(opt => opt.style.pointerEvents = 'none');
-	    if (index === correctIndex) {
-		option.classList.add('correct');
-	    }else {
-		option.classList.add('incorrect');
-		options[correctIndex].classList.add('correct');
-	    }
-	    nextBtn.disabled = false;
-	});
-    });
-});
