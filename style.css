@@ -174,14 +174,14 @@ body {
     background: #0096;
 }
 .options .option.correct {
-    background: #000000;
+    background: #0096;
     color: #155724;
-    border-color: #008000;
+    border: 2px solid #008000;
 }
 .options .option.incorrect {
-    background: #000000;
+    background: #0096;
     color: #FF0000;
-    border-color: #FF0000;
+    border: 2px solid #FF0000;
 }
 .quiz-border .quiz-footer {
     justify-content: space-between;
