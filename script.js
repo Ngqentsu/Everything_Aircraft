@@ -108,7 +108,7 @@ function displayQuestion(index) {
     questionNumberData.textContent = `${index + 1} of ${questions.length} questions`;
     headerScoreElement.textContent = `Score ${score} / ${questions.length}`;
     
-    nextBtn.disabled = true;
+    nextBtn.disabled = !userAnswers[index];
 
     if (index === 0) {
 	backBtn.disabled = true;
@@ -121,8 +121,9 @@ function displayQuestion(index) {
     }
 };
 
-function selectOption(option, correctAnswer) {
+function selectOption(option, correctAnswer, index) {
     const selectedOption = option.textContent.trim().charAt(0);
+    userAnswers[index] = selectedOption;
     const allOptions = optionsInfo.querySelectorAll('.option');
     allOptions.forEach(opt => opt.onclick = null);
     
