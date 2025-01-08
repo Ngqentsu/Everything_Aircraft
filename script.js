@@ -263,7 +263,6 @@ function restartQuiz() {
     questionCount = 0;
     score = 0;
     userAnswers.fill(null);
-    quizInfo.innerHTML = ''; // Clear completion message
     displayQuestion(questionCount);
 }
 
