@@ -46,10 +46,10 @@ const questions = [
     {
         question: "True or False: The rudder controls the pitch of an aircraft.",
         options: [
-            "True",
-            "False"
+            "A. True",
+            "B. False"
         ],
-        correctAnswer: "False",
+        correctAnswer: "B",
     },
     {
         question: "What is the primary function of an aircraft's wing flaps?",
