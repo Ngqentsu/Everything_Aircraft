@@ -44,6 +44,14 @@ const questions = [
         correctAnswer: "C",
     },
     {
+        question: "True or False: The rudder controls the pitch of an aircraft.",
+        options: [
+            "True",
+            "False"
+        ],
+        correctAnswer: "False",
+    },
+    {
         question: "What is the primary function of an aircraft's wing flaps?",
         options: [
             "A. Increase speed",
@@ -54,14 +62,100 @@ const questions = [
         correctAnswer: "D",
     },
     {
-        question: "What is the role of the rudder in an aircraft?",
+        question: "What is the main purpose of the altimeter in an aircraft?",
         options: [
-            "A. Control yaw",
-            "B. Control pitch",
-            "C. Control roll",
-            "D. Increase speed"
+            "A. Measure airspeed",
+            "B. Measure altitude",
+            "C. Measure fuel levels",
+            "D. Measure pressure"
         ],
-        correctAnswer: "A",
+        correctAnswer: "B",
+    },
+    {
+        question: "Fill in the blank: The ______ engine is commonly used in modern jet aircraft.",
+        options: [
+            "Turbojet",
+            "Rocket",
+            "Piston",
+            "Steam"
+        ],
+        correctAnswer: "Turbojet",
+    },
+    {
+        question: "Which country developed the Concorde supersonic passenger jet?",
+        options: [
+            "A. USA",
+            "B. France and UK",
+            "C. Russia",
+            "D. Germany"
+        ],
+        correctAnswer: "B",
+    },
+    {
+        question: "What type of aircraft component is the aileron?",
+        options: [
+            "A. Engine part",
+            "B. Landing gear",
+            "C. Control surface",
+            "D. Cabin equipment"
+        ],
+        correctAnswer: "C",
+    },
+    {
+        question: "What is the primary function of an aircraft's autopilot system?",
+        options: [
+            "A. Takeoff and landing",
+            "B. Emergency recovery",
+            "C. Assist the pilot in maintaining stable flight",
+            "D. Navigation planning"
+        ],
+        correctAnswer: "C",
+    },
+    {
+        question: "True or False: The Airbus A380 can carry over 800 passengers in an all-economy configuration.",
+        options: [
+            "True",
+            "False"
+        ],
+        correctAnswer: "True",
+    },
+    {
+        question: "Fill in the blank: The ______ is a device used to measure the speed of an aircraft relative to the air.",
+        options: [
+            "Altimeter",
+            "Airspeed indicator",
+            "Gyroscope",
+            "Black box"
+        ],
+        correctAnswer: "Airspeed indicator",
+    },
+    {
+        question: "Which of the following aircraft holds the record for the fastest manned flight?",
+        options: [
+            "A. Concorde",
+            "B. SR-71 Blackbird",
+            "C. Lockheed Martin X-15",
+            "D. Space Shuttle"
+        ],
+        correctAnswer: "C",
+    },
+    {
+        question: "True or False: The primary purpose of spoilers on an aircraft is to increase lift during flight.",
+        options: [
+            "True",
+            "False"
+        ],
+        correctAnswer: "False",
+    },
+    {
+        question: "Fill in the blank: The process of reducing speed and descending for landing is known as the ______ phase.",
+        options: [
+            "Climb",
+            "Cruise",
+            "Descent",
+            "Landing"
+        ],
+        correctAnswer: "Descent",
     }
 ];
 
