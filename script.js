@@ -93,11 +93,11 @@ function displayQuestion(index) {
         option.innerHTML = `<span>${optionText}</span>`;
 
 	const selectedAnswer = userAnswer[index];
-	if (selectedAnswer) {
-	    option.click = null;
+	if (selectedAnswer)) {
 	    if (optionText.startWith(selectedAnswer)) {
 		option.classList.add(selectedAnswer === questionData.correctAnswer ? 'correct' : 'incorrect');
 	    }
+	    option.click = null;
 	} else {
             option.onclick = () => selectOption(option, questionData.correctAnswer, index);
 	}
