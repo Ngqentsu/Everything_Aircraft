@@ -67,6 +67,7 @@ const questions = [
 
 let questionCount = 0;
 let score = 0;
+const userAnswers = Array(questions.length).fill(null);
 
 startBtn.onclick = () => {
     console.log("Start Quiz button clicked");
@@ -90,7 +91,17 @@ function displayQuestion(index) {
         const option = document.createElement("div");
         option.className = "option";
         option.innerHTML = `<span>${optionText}</span>`;
-        option.onclick = () => selectOption(option, questionData.correctAnswer);
+
+	const selectedAnswer = userAnswer[index];
+	if (selectedAnswer) {
+	    option.click = null;
+	    if (optionText.startWith(selectedAnswer)) {
+		option.classList.add(selectedAnswer === questionData.correctAnswer ? 'correct' : 'incorrect');
+	    }
+	} else {
+            option.onclick = () => selectOption(option, questionData.correctAnswer, index);
+	}
+	
         optionsInfo.appendChild(option);
     });
 
