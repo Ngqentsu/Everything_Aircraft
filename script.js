@@ -188,7 +188,7 @@ function displayQuestion(index) {
 
 	const selectedAnswer = userAnswers[index];
 	if (selectedAnswer) {
-	    if (optionText.startWith(selectedAnswer)) {
+	    if (optionText.startsWith(selectedAnswer)) {
 		option.classList.add(selectedAnswer === questionData.correctAnswer ? 'correct' : 'incorrect');
 	    }
 	    option.onclick = null;
