@@ -121,7 +121,8 @@ body {
 .quiz {
     display: none;
     position: absolute;
-    left: 0;
+    left: 50%;
+    top: 50%;
     justify-content: center;
     align-items: center;
     background: #0096;
