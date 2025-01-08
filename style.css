@@ -166,7 +166,7 @@ body {
     font-size: 15px;
     margin: 15px 0;
     padding: 5px;
-    border-radius: 3px;
+    border-radius: 3px solid #0000000;
     cursor: pointer;
     transition: 0.3s;
 }
