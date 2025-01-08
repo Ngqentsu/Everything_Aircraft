@@ -10,6 +10,7 @@ const optionsInfo = document.querySelector('.options');
 const questionNumberData = document.querySelector('.question-number');
 const headerScoreElement = document.querySelector('.header-score');
 const landing = document.querySelector('.landing');
+const backBtn = document.querySelector('.back-btn');
 
 const questions = [
     {
@@ -67,6 +68,13 @@ const questions = [
 let questionCount = 0;
 let score = 0;
 
+startBtn.onclick = () => {
+    if (questionCount > 0) {
+	questionCount--;
+	displayQuestion(questionCount);
+    }
+};
+
 function displayQuestion(index) {
     const questionData = questions[index];
     questionInfo.textContent = questionData.question;
@@ -81,7 +89,19 @@ function displayQuestion(index) {
     });
 
     questionNumberData.textContent = `${index + 1} of ${questions.length} questions`;
+    headerScoreElement.textContent = `Score ${score} / ${questions.length}`;
+    
     nextBtn.disabled = true;
+
+    if (index === 0) {
+	backBtn.disabled = true;
+	backBtn.style.opacity = "0.5";
+	backBtn.style.cursor = "not-allowed";
+    } else {
+	backBtn.disabled = false;
+	backBtn.style.opacity = "1";
+	backBtn.style.cursor = "pointer";
+    }
 };
 
 function selectOption(option, correctAnswer) {
@@ -123,3 +143,7 @@ continueBtn.onclick = () => {
 exitBtn.onclick = () => {
     popupInfo.classList.remove('active');
 };
+
+backBtn.disabled = true;
+backBtn.style.opacity = "0.5";
+backBtn.style.cursor = "not-allowed";
