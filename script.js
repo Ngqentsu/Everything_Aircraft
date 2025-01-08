@@ -69,6 +69,12 @@ let questionCount = 0;
 let score = 0;
 
 startBtn.onclick = () => {
+    console.log("Start Quiz button clicked");
+    popupInfo.classList.add('active');
+    landing.classList.add('active');
+};
+
+backBtn.onclick = () => {
     if (questionCount > 0) {
 	questionCount--;
 	displayQuestion(questionCount);
@@ -126,12 +132,6 @@ nextBtn.onclick = () => {
     } else {
         quizInfo.innerHTML = `<h2>Quiz Completed!</h2><p>Your final score is ${score} / ${questions.length}.</p>`;
     }
-};
-
-startBtn.onclick = () => {
-    console.log("Start Quiz button clicked");
-    popupInfo.classList.add('active');
-    landing.classList.add('active');
 };
 
 continueBtn.onclick = () => {
