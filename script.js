@@ -240,7 +240,12 @@ nextBtn.onclick = () => {
     if (questionCount < questions.length) {
         displayQuestion(questionCount);
     } else {
-        quizInfo.innerHTML = `<h2>Quiz Completed!</h2><p>Your final score is ${score} / ${questions.length}.</p>`;
+        quizInfo.innerHTML = `
+            <h2>Quiz Completed!</h2>
+            <p>Your final score is ${score} / ${questions.length}.</p>
+            <button class="restart-btn">Restart Quiz</button>
+        `;
+        document.querySelector('.restart-btn').onclick = restartQuiz;
     }
 };
 
@@ -253,6 +258,14 @@ continueBtn.onclick = () => {
 exitBtn.onclick = () => {
     popupInfo.classList.remove('active');
 };
+
+function restartQuiz() {
+    questionCount = 0;
+    score = 0;
+    userAnswers.fill(null);
+    quizInfo.innerHTML = ''; // Clear completion message
+    displayQuestion(questionCount);
+}
 
 backBtn.disabled = true;
 backBtn.style.opacity = "0.5";
