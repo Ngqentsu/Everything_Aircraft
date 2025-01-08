@@ -45,6 +45,20 @@
     box-shadow: none;
 }
 
+@media (max-width: 768px) {
+    .landing-text h1 {
+        font-size: 100px;
+    }
+
+    .landing-text p {
+        font-size: 20px;
+    }
+
+    .quiz-border {
+        width: 80%;
+    }
+}
+
 body {
     color: #fff;
 }
