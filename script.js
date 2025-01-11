@@ -254,6 +254,7 @@ nextBtn.onclick = () => {
     quizInfo.appendChild(restartBtn); 
 
     restartBtn.addEventListener('click', restartQuiz);
+    nextBtn.disabled = true;
 };
 
 continueBtn.onclick = () => {
