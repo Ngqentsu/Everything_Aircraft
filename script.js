@@ -247,14 +247,6 @@ nextBtn.onclick = () => {
         `;
         document.querySelector('.restart-btn').onclick = restartQuiz;
     }
-
-    const restartBtn = document.createElement('button'); 
-    restartBtn.classList.add('restart-btn'); 
-    restartBtn.textContent = 'Restart Quiz';
-    quizInfo.appendChild(restartBtn); 
-
-    restartBtn.addEventListener('click', restartQuiz);
-    nextBtn.disabled = true;
 };
 
 continueBtn.onclick = () => {
