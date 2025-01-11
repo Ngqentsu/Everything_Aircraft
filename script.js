@@ -144,6 +144,13 @@ nextBtn.onclick = () => {
     } else {
         quizInfo.innerHTML = `<h2>Quiz Completed!</h2><p>Your final score is ${score} / ${questions.length}.</p>`;
     }
+
+    const restartBtn = document.createElement('button'); 
+    restartBtn.classList.add('restart-btn'); 
+    restartBtn.textContent = 'Restart Quiz';
+    quizInfo.appendChild(restartBtn); 
+
+    restartBtn.addEventListener('click', restartQuiz);
 };
 
 continueBtn.onclick = () => {
