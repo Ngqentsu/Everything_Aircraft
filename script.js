@@ -44,6 +44,14 @@ const questions = [
         correctAnswer: "C",
     },
     {
+        question: "True or False: The rudder controls the pitch of an aircraft.",
+        options: [
+            "A. True",
+            "B. False"
+        ],
+        correctAnswer: "B",
+    },
+    {
         question: "What is the primary function of an aircraft's wing flaps?",
         options: [
             "A. Increase speed",
@@ -54,14 +62,100 @@ const questions = [
         correctAnswer: "D",
     },
     {
-        question: "What is the role of the rudder in an aircraft?",
+        question: "What is the main purpose of the altimeter in an aircraft?",
         options: [
-            "A. Control yaw",
-            "B. Control pitch",
-            "C. Control roll",
-            "D. Increase speed"
+            "A. Measure airspeed",
+            "B. Measure altitude",
+            "C. Measure fuel levels",
+            "D. Measure pressure"
+        ],
+        correctAnswer: "B",
+    },
+    {
+        question: "Fill in the blank: The ______ engine is commonly used in modern jet aircraft.",
+        options: [
+            "A. Turbojet",
+            "B. Rocket",
+            "C. Piston",
+            "D. Steam"
         ],
         correctAnswer: "A",
+    },
+    {
+        question: "Which country developed the Concorde supersonic passenger jet?",
+        options: [
+            "A. USA",
+            "B. France and UK",
+            "C. Russia",
+            "D. Germany"
+        ],
+        correctAnswer: "B",
+    },
+    {
+        question: "What type of aircraft component is the aileron?",
+        options: [
+            "A. Engine part",
+            "B. Landing gear",
+            "C. Control surface",
+            "D. Cabin equipment"
+        ],
+        correctAnswer: "C",
+    },
+    {
+        question: "What is the primary function of an aircraft's autopilot system?",
+        options: [
+            "A. Takeoff and landing",
+            "B. Emergency recovery",
+            "C. Assist the pilot in maintaining stable flight",
+            "D. Navigation planning"
+        ],
+        correctAnswer: "C",
+    },
+    {
+        question: "True or False: The Airbus A380 can carry over 800 passengers in an all-economy configuration.",
+        options: [
+            "A. True",
+            "B. False"
+        ],
+        correctAnswer: "A",
+    },
+    {
+        question: "Fill in the blank: The ______ is a device used to measure the speed of an aircraft relative to the air.",
+        options: [
+            "A. Altimeter",
+            "B. Airspeed indicator",
+            "C. Gyroscope",
+            "D. Black box"
+        ],
+        correctAnswer: "B",
+    },
+    {
+        question: "Which of the following aircraft holds the record for the fastest manned flight?",
+        options: [
+            "A. Concorde",
+            "B. SR-71 Blackbird",
+            "C. Lockheed Martin X-15",
+            "D. Space Shuttle"
+        ],
+        correctAnswer: "C",
+    },
+    {
+        question: "True or False: The primary purpose of spoilers on an aircraft is to increase lift during flight.",
+        options: [
+            "A. True",
+            "B. False"
+        ],
+        correctAnswer: "B",
+    },
+    {
+        question: "Fill in the blank: The process of reducing speed and descending for landing is known as the ______ phase.",
+        options: [
+            "A. Climb",
+            "B. Cruise",
+            "C. Descent",
+            "D. Landing"
+        ],
+        correctAnswer: "C",
     }
 ];
 
@@ -94,7 +188,7 @@ function displayQuestion(index) {
 
 	const selectedAnswer = userAnswers[index];
 	if (selectedAnswer) {
-	    if (optionText.startWith(selectedAnswer)) {
+	    if (optionText.startsWith(selectedAnswer)) {
 		option.classList.add(selectedAnswer === questionData.correctAnswer ? 'correct' : 'incorrect');
 	    }
 	    option.onclick = null;
@@ -124,6 +218,7 @@ function displayQuestion(index) {
 function selectOption(option, correctAnswer, index) {
     const selectedOption = option.textContent.trim().charAt(0);
     userAnswers[index] = selectedOption;
+
     const allOptions = optionsInfo.querySelectorAll('.option');
     allOptions.forEach(opt => opt.onclick = null);
     
@@ -132,6 +227,9 @@ function selectOption(option, correctAnswer, index) {
 	option.classList.add('correct');
     }else {
 	option.classList.add('incorrect');
+
+	const correctOption = [...allOptions].find(opt => opt.textContent.trim().startsWith(correctAnswer));
+	correctOption.classList.add('correct');
     }
     headerScoreElement.textContent = `Score ${score} / ${questions.length}`;
     nextBtn.disabled = false;
@@ -142,7 +240,12 @@ nextBtn.onclick = () => {
     if (questionCount < questions.length) {
         displayQuestion(questionCount);
     } else {
-        quizInfo.innerHTML = `<h2>Quiz Completed!</h2><p>Your final score is ${score} / ${questions.length}.</p>`;
+        quizInfo.innerHTML = `
+            <h2>Quiz Completed!</h2>
+            <p>Your final score is ${score} / ${questions.length}.</p>
+            <button class="restart-btn">Restart Quiz</button>
+        `;
+        document.querySelector('.restart-btn').onclick = restartQuiz;
     }
 
     const restartBtn = document.createElement('button'); 
@@ -162,6 +265,13 @@ continueBtn.onclick = () => {
 exitBtn.onclick = () => {
     popupInfo.classList.remove('active');
 };
+
+function restartQuiz() {
+    questionCount = 0;
+    score = 0;
+    userAnswers.fill(null);
+    displayQuestion(questionCount);
+}
 
 backBtn.disabled = true;
 backBtn.style.opacity = "0.5";
