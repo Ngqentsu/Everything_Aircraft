@@ -248,16 +248,6 @@ nextBtn.onclick = () => {
     }
 };
 
-function restartQuiz {
-    questionCount = 0;
-    score = 0;
-    quizCompleted = false;
-    userAnswers.fill(null);
-    displayQuestion(questionCount);
-    popupInfo.classList.add('active');
-    quizInfo.classList.remove('active');
-};
-
 continueBtn.onclick = () => {
     popupInfo.classList.remove('active');
     quizInfo.classList.add('active');
