@@ -11,7 +11,6 @@ const questionNumberData = document.querySelector('.question-number');
 const headerScoreElement = document.querySelector('.header-score');
 const landing = document.querySelector('.landing');
 const backBtn = document.querySelector('.back-btn');
-const restarBtn = document.querySelector('.restart-btn');
 
 const questions = [
     {
@@ -249,15 +248,17 @@ nextBtn.onclick = () => {
     }
 };
 
-restartBtn.onclick = () => {
+function restartQuiz {
     questionCount = 0;
     score = 0;
     quizCompleted = false;
+    userAnswers.fill(null);
     displayQuestion(questionCount);
+    popupInfo.classList.add('active');
+    quizInfo.classList.remove('active');
 };
 
 continueBtn.onclick = () => {
-    console.log("Continue button clicked");
     popupInfo.classList.remove('active');
     quizInfo.classList.add('active');
     displayQuestion(questionCount);
