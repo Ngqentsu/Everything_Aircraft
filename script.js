@@ -257,6 +257,7 @@ restartBtn.onclick = () => {
 };
 
 continueBtn.onclick = () => {
+    console.log("Continue button clicked");
     popupInfo.classList.remove('active');
     quizInfo.classList.add('active');
     displayQuestion(questionCount);
