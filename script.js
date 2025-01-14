@@ -241,8 +241,6 @@ const restartQuiz = () => {
     displayQuestion(currentQuestionIndex);
 };
 
-document.getElementById("restartQuizButton").addEventListener("click", restartQuiz);
-
 nextBtn.onclick = () => {
     questionCount++;
     if (questionCount < questions.length) {
