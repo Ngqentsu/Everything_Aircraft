@@ -234,6 +234,15 @@ function selectOption(option, correctAnswer, index) {
     nextBtn.disabled = false;
 };
 
+const restartQuiz = () => {
+    currentQuestionIndex = 0;
+    score = 0;
+    quizCompleted = false;
+    displayQuestion(currentQuestionIndex);
+};
+
+document.getElementById("restartQuizButton").addEventListener("click", restartQuiz);
+
 nextBtn.onclick = () => {
     questionCount++;
     if (questionCount < questions.length) {
